@@ -1,10 +1,14 @@
-.Product {
+.Product{
     border: 2px solid black;
-    margin: 10px;
-    padding: 0 10px 0 10px;
-    border-radius:10px;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    -ms-border-radius:10px;
-    -o-border-radius:10px;
-}  
+    /* padding: 0 10px 0 10px; */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 146px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}

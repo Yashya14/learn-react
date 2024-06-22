@@ -1,28 +1,23 @@
 import React from "react";
 import "./Product.css";
+import Price from "../Price";
 
-const Product = ({ title, price, features,newFeatures }) => {
-  // const list = features.map((item) => {
-  //     return <li>{item}</li>
-  // });
-  let isDiscount = price < 3000;
- 
-  let styles = {backgroundColor: isDiscount ? "pink" : "red"}
-
-
+const Product = ({ title, idx }) => {
+  let oldPrices = ["12,789", "11,890", "1,590", "599"];
+  let newPrices = ["8,999", "9,199", "800", "289"];
+  let description = [
+    ["8,000 DPI","5 Programmable buttons"],
+    ["Intutive surface","designed by Intel"],
+    ["Designed for IPad Pro","wireless"],
+    ["Wireless","Intel"],
+  ];
 
   return (
-    <div className="Product" style={styles}>
+    <div className="Product">
       <h3>{title}</h3>
-      <p>Price : {price}</p>
-      <p>new : {newFeatures.a}</p>
-      {isDiscount && <p>Discount of 5%</p>}
-      <p>
-        {features.map((item) => (
-          <li>{item}</li>
-        ))}
-      </p>
-     
+      <p>{description[idx][0]}</p>
+      <p>{description[idx][1]}</p>
+      <Price oldPrice={oldPrices[idx]} newPrice={newPrices[idx]} />
     </div>
   );
 };
