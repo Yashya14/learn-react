@@ -1,6 +1,8 @@
+import React from "react";
 import Button from "./Button";
 import ColorBoard from "./ColorBoard";
 import ProductTab from "./ProductTab";
+import Todos from "./Todos";
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
       <ProductTab />
       <Button />
       <ColorBoard />
+      <Todos />
     </>
   );
 }
