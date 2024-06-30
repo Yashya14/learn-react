@@ -1,20 +1,39 @@
-function handleSendMsg() {
-  console.log("hello world");
-}
-function handleHover() {
-  console.log("mouse over");
-}
+import { useState } from "react";
 
 const Button = () => {
+  const [count, setCount] = useState(0);
+  const [liked,setLiked] = useState(false);
+
+  const handleClick =() => {
+    setCount(count+1);
+  }
+
+  const handleLiked = () => {
+    let newValue = !liked;
+    setLiked(newValue);
+  }
+
+  let styles = {
+    color : "red",
+    textAlign : "center",
+    fontSize : "3rem",
+  }
+
   return (
     <div>
-      <button onClick={handleSendMsg}>submit</button>
-      <p onMouseOver={handleHover}>
+      <h1>count : {count}</h1>
+      <button onClick={handleClick}>Click</button>
+      <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci unde
         eaque, nam eius eos vel, rem tenetur omnis commodi totam debitis sed
         distinctio nihil nulla dicta repudiandae architecto odit libero?
       </p>
-    </div>  
+
+     <h1 onClick={handleLiked} style={styles}>
+        {liked ? <i className="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}
+     </h1>
+
+    </div>
   );
 };
 
