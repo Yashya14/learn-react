@@ -3,6 +3,8 @@ import Button from "./Button";
 import ColorBoard from "./ColorBoard";
 import ProductTab from "./ProductTab";
 import Todos from "./Todos";
+import BackgroundChanger from "./BackgroundChanger";
+import Lottery from "./Lottery";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Button />
       <ColorBoard />
       <Todos />
+      <BackgroundChanger />
+      <Lottery/>
     </>
   );
 }

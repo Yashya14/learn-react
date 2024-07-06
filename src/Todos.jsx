@@ -40,6 +40,9 @@ const Todos = () => {
   }
 
   return (
+    <>
+    
+    
     <div>
     <br /><br /><hr />
     <h1>Todo App</h1>
@@ -63,6 +66,8 @@ const Todos = () => {
         <button onClick={ markAllAsDone}>marks all as done</button>
       
     </div>
+    <hr />
+    </>
   );
 };
 
