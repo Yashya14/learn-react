@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { genTicket, sum } from "./helper";
+import { genTicket } from "./helper";
+import Ticket from "./Ticket";
 
-const Lottery = () => {
-  const [ticket, setTicket] = useState(genTicket(3));
-  const isWinning = sum(ticket) === 15;
+const Lottery = ({n = 3,winCondition}) => {
+  const [ticket, setTicket] = useState(genTicket(n));
+  const isWinning = winCondition(ticket);
+
   const buyTicket = () => {
-    setTicket(genTicket(3));
+    setTicket(genTicket(n));
   };
 
   return (
@@ -19,11 +21,18 @@ const Lottery = () => {
           borderRadius: "30px",
           textAlign: "center",
           fontSize: "30px",
+          height: "100px",
+          width: "28rem",
+          display:"flex",
+          justifyContent: "center",
+          alignItems:"center",
+          fontSize:"3rem",
+          
         }}
       >
-        <span>{ticket[0]}</span>
-        <span>{ticket[1]}</span>
-        <span>{ticket[2]}</span>
+      
+        <Ticket ticket={ticket}/>
+
       </div>
       <button
         onClick={buyTicket}
