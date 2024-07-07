@@ -1,24 +1,21 @@
 import { useState } from "react";
-import "./BackgroundChanger.css"
+import "./BackgroundChanger.css";
 
 const BackgroundChanger = () => {
-    const [bgColor,setBgColor] = useState("red");
-
-
+  const [bgColor, setBgColor] = useState("purple");
 
   return (
-    <div className="bgColor" style={{backgroundColor:bgColor}}>
+    <div className="bgColor" style={{ backgroundColor: bgColor }}>
       <div
         style={{
           backgroundColor: "gray",
           padding: "10px 10px",
           borderRadius: "30px",
           display: "flex",
-          alignItems:"center",
-          justifyContent :"center",
-          flexWrap:"wrap"
+          alignItems: "center",
+          justifyContent: "center",
+          flexWrap: "wrap",
         }}
-        
       >
         <button
           style={{
@@ -28,7 +25,7 @@ const BackgroundChanger = () => {
             borderRadius: "20px",
             marginRight: "10px",
             border: "none",
-            cursor:"pointer"
+            cursor: "pointer",
           }}
           onClick={() => setBgColor("red")}
         >
@@ -42,7 +39,7 @@ const BackgroundChanger = () => {
             borderRadius: "20px",
             marginRight: "10px",
             border: "none",
-            cursor:"pointer"
+            cursor: "pointer",
           }}
           onClick={() => setBgColor("green")}
         >
@@ -56,7 +53,7 @@ const BackgroundChanger = () => {
             borderRadius: "20px",
             marginRight: "10px",
             border: "none",
-            cursor:"pointer"
+            cursor: "pointer",
           }}
           onClick={() => setBgColor("orange")}
         >
@@ -70,7 +67,7 @@ const BackgroundChanger = () => {
             borderRadius: "20px",
             marginRight: "10px",
             border: "none",
-            cursor:"pointer"
+            cursor: "pointer",
           }}
           onClick={() => setBgColor("blue")}
         >
@@ -84,7 +81,7 @@ const BackgroundChanger = () => {
             borderRadius: "20px",
             marginRight: "10px",
             border: "none",
-            cursor:"pointer"
+            cursor: "pointer",
           }}
           onClick={() => setBgColor("purple")}
         >
@@ -98,7 +95,7 @@ const BackgroundChanger = () => {
             borderRadius: "20px",
             marginRight: "10px",
             border: "none",
-            cursor:"pointer"
+            cursor: "pointer",
           }}
           onClick={() => setBgColor("magenta")}
         >
@@ -112,7 +109,7 @@ const BackgroundChanger = () => {
             borderRadius: "20px",
             marginRight: "10px",
             border: "none",
-            cursor:"pointer"
+            cursor: "pointer",
           }}
           onClick={() => setBgColor("skyblue")}
         >
