@@ -5,8 +5,14 @@ import ProductTab from "./ProductTab";
 import Todos from "./Todos";
 import BackgroundChanger from "./BackgroundChanger";
 import Lottery from "./Lottery";
+import { sum } from "./helper";
+import Form from "./Form";
 
 function App() {
+  let winCondition = (ticket) => {
+    return ticket.every((num) => num === ticket[0]);
+    // sum(ticket) == 15
+  }
   return (
     <>
       <h2 style={{ textAlign: "center" }}>Blockbuster Deals | shop now</h2>
@@ -15,7 +21,8 @@ function App() {
       <ColorBoard />
       <Todos />
       <BackgroundChanger />
-      <Lottery/>
+      <Lottery n={3} winCondition={winCondition}/>
+      <Form />
     </>
   );
 }
