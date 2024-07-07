@@ -20,7 +20,6 @@ const Lottery = ({n = 3,winCondition}) => {
           padding: "10px 10px",
           borderRadius: "30px",
           textAlign: "center",
-          fontSize: "30px",
           height: "100px",
           width: "28rem",
           display:"flex",
