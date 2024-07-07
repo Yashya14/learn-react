@@ -53,10 +53,11 @@ const Form = () => {
         <input
           type="password"
           placeholder="enter password"
-          id="username"
+          id="password"
           onChange={handleInputChange}
           name="password"
           value={formData.password}
+          autoComplete="password"
         />
         &nbsp;&nbsp;
         <button>Submit</button>

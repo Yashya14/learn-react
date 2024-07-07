@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Button = () => {
   const [count, setCount] = useState(0);
   const [liked,setLiked] = useState(false);
+
+  useEffect(() => {
+    console.log("useEffect() called");
+  },[count])
 
   const handleClick =() => {
     setCount(count+1);

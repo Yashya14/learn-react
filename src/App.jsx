@@ -7,6 +7,8 @@ import BackgroundChanger from "./BackgroundChanger";
 import Lottery from "./Lottery";
 import { sum } from "./helper";
 import Form from "./Form";
+import CommentForm from "./CommentForm";
+import Jokes from "./Jokes";
 
 function App() {
   let winCondition = (ticket) => {
@@ -23,6 +25,8 @@ function App() {
       <BackgroundChanger />
       <Lottery n={3} winCondition={winCondition}/>
       <Form />
+      <CommentForm />
+      <Jokes/>
     </>
   );
 }
