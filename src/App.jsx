@@ -9,12 +9,13 @@ import { sum } from "./helper";
 import Form from "./Form";
 import CommentForm from "./CommentForm";
 import Jokes from "./Jokes";
+import PasswordGenerator from "./components/PasswordGenerator";
 
 function App() {
   let winCondition = (ticket) => {
     return ticket.every((num) => num === ticket[0]);
     // sum(ticket) == 15
-  }
+  };
   return (
     <>
       <h2 style={{ textAlign: "center" }}>Blockbuster Deals | shop now</h2>
@@ -23,10 +24,11 @@ function App() {
       <ColorBoard />
       <Todos />
       <BackgroundChanger />
-      <Lottery n={3} winCondition={winCondition}/>
+      <Lottery n={3} winCondition={winCondition} />
       <Form />
       <CommentForm />
-      <Jokes/>
+      <Jokes />
+      <PasswordGenerator />
     </>
   );
 }
