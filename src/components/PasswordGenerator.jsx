@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "./PasswordGenerator.css";
 
 const PasswordGenerator = () => {
@@ -6,6 +6,8 @@ const PasswordGenerator = () => {
   const [number, setNumber] = useState(false);
   const [char, setChar] = useState(false);
   const [password, setPassword] = useState("");
+
+  const passRef = useRef(null);
 
   const passwordGenerator = useCallback(() => {
     let pass = "";
@@ -25,6 +27,13 @@ const PasswordGenerator = () => {
     passwordGenerator();
   }, [length, number, char, passwordGenerator]);
 
+  //?   not for production
+  const copyToClipboard = useCallback(() => {
+    window.navigator.clipboard.writeText(password);
+    passRef.current.select();
+    passRef.current.setSelectionRange(0, 99);
+  });
+
   return (
     <div className="container">
       <h3>Password Generator</h3>
@@ -34,9 +43,10 @@ const PasswordGenerator = () => {
           name="password"
           id="password"
           value={password}
+          ref={passRef}
           readOnly
         />
-        <button>Copy</button>
+        <button onClick={copyToClipboard}>Copy</button>
         <div className="main2">
           <input
             type="range"
