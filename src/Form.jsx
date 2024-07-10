@@ -19,6 +19,7 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData)
+    alert(`Your Fullname is ${formData.fullname} and username is ${formData.username}`);
     setFormData({
       fullname: "",
       username: "",
